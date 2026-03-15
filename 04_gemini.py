@@ -1,6 +1,8 @@
 from google import genai
+from dotenv import load_dotenv
+load_dotenv()
 
-client = genai.Client(api_key='AIzaSyDx5qBaEXhc5S4sviOPzUp6Fu6BPiiM-mI')
+client = genai.Client()
 
 response = client.models.generate_content(
     model="gemini-3-flash-preview",
